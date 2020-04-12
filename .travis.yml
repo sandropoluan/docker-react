@@ -6,4 +6,4 @@ berfore_install:
   - docker build -t sandrobrayen/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run sandrobrayen/docker-react npm run test -- --coverage
+  - docker run -e CI=true sandrobrayen/docker-react npm run test -- --coverage
